@@ -13,6 +13,8 @@ if [ $(id -u) -eq 0 ]; then
                     /usr/bin/docker compose down
                 fi
 
+                export COMPOSE_BAKE=true
+
                 /usr/bin/docker compose up -d --build
 
                 exit 0
